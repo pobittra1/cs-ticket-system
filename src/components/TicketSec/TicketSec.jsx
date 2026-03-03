@@ -108,8 +108,20 @@ const TicketSec = () => {
                     </div>
                 </div>
             </div>
-            <div className="right-ticket-container col-span-4 bg-green-400">
-                <div>ticket2</div>
+            <div className="right-ticket-container col-span-4">
+                <div className="task-status-container">
+                    <h2 className="sub-title">Task Status</h2>
+                    <div className="task-status-card bg-white text-black p-2 rounded-sm">
+                        <h3 className="text-xl font-bold capitalize">payment failed - card Declined</h3>
+                        <button className="py-1.5 bg-[#02A53B] text-white font-semibold cursor-pointer w-full text-center mt-2">complete</button>
+                    </div>
+                </div>
+                <div className="resolved-task-container mt-8">
+                    <h2 className="sub-title">Resolved Task</h2>
+                    <div className="mt-4 bg-[#001931] rounded-sm capitalize">
+                        <h3 className="p-2">incorrect billing address</h3>
+                    </div>
+                </div>
             </div>
         </div>
     );
