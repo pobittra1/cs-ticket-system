@@ -2,6 +2,7 @@
 import './App.css'
 import HeroSec from './components/HeroSec/HeroSec'
 import Navbar from './components/Navbar/Navbar'
+import TicketSec from './components/TicketSec/TicketSec'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <div className="web-container w-11/12 mx-auto">
         <Navbar></Navbar>
         <HeroSec></HeroSec>
+        <TicketSec></TicketSec>
       </div>
     </>
   )
