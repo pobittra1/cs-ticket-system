@@ -1,5 +1,6 @@
 
 import './App.css'
+import HeroSec from './components/HeroSec/HeroSec'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
@@ -7,7 +8,10 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <div className="web-container w-11/12 mx-auto">
+        <Navbar></Navbar>
+        <HeroSec></HeroSec>
+      </div>
     </>
   )
 }

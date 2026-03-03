@@ -1,7 +1,7 @@
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-base-100 shadow-sm p-0 m-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Navbar = () => {
                             <a className='bg-linear-to-r from-blue-500 to-purple-400 px-3 py-2'>+ New Ticket</a>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">CS-Ticket System</a>
+                    <a className="btn btn-ghost text-xl m-0">CS-Ticket System</a>
                 </div>
                 <div className="navbar-end hidden md:flex">
                     <ul className="menu menu-horizontal px-1">
