@@ -1,0 +1,137 @@
+[
+    {
+        "id": 101,
+        "title": "Login issue after password reset",
+        "description": "Customer cannot log in even after resetting the password multiple times.",
+        "customer": "Rahim Uddin",
+        "priority": "High Priority",
+        "status": "Open",
+        "createdAt": "01/03/2026"
+    },
+    {
+        "id": 102,
+        "title": "Payment deducted but order not confirmed",
+        "description": "Amount was deducted but no order confirmation received.",
+        "customer": "Sadia Akter",
+        "priority": "High Priority",
+        "status": "In-Progress",
+        "createdAt": "02/03/2026"
+    },
+    {
+        "id": 103,
+        "title": "Website loading very slow",
+        "description": "Homepage takes too long to load on mobile devices.",
+        "customer": "Tanvir Hasan",
+        "priority": "Medium Priority",
+        "status": "Open",
+        "createdAt": "02/03/2026"
+    },
+    {
+        "id": 104,
+        "title": "Unable to upload profile picture",
+        "description": "Error appears while uploading profile image.",
+        "customer": "Mim Rahman",
+        "priority": "Low Priority",
+        "status": "Open",
+        "createdAt": "28/02/2026"
+    },
+    {
+        "id": 105,
+        "title": "Incorrect discount applied",
+        "description": "Promo code applied but wrong discount percentage given.",
+        "customer": "Nusrat Jahan",
+        "priority": "Medium Priority",
+        "status": "In-Progress",
+        "createdAt": "03/03/2026"
+    },
+    {
+        "id": 106,
+        "title": "App crashes on checkout",
+        "description": "Mobile app crashes during checkout process.",
+        "customer": "Arif Hossain",
+        "priority": "High Priority",
+        "status": "Open",
+        "createdAt": "03/03/2026"
+    },
+    {
+        "id": 107,
+        "title": "Order delivered late",
+        "description": "Customer received order 3 days later than expected date.",
+        "customer": "Farhana Islam",
+        "priority": "Medium Priority",
+        "status": "Open",
+        "createdAt": "27/02/2026"
+    },
+    {
+        "id": 108,
+        "title": "Refund not processed",
+        "description": "Refund request approved but money not returned yet.",
+        "customer": "Imran Chowdhury",
+        "priority": "High Priority",
+        "status": "In-Progress",
+        "createdAt": "26/02/2026"
+    },
+    {
+        "id": 109,
+        "title": "Account verification email not received",
+        "description": "Customer did not receive verification email after signup.",
+        "customer": "Jannat Sultana",
+        "priority": "Low Priority",
+        "status": "Open",
+        "createdAt": "25/02/2026"
+    },
+    {
+        "id": 110,
+        "title": "Error 500 on dashboard",
+        "description": "Internal server error appears while accessing dashboard.",
+        "customer": "Mehedi Hasan",
+        "priority": "High Priority",
+        "status": "In-Progress",
+        "createdAt": "03/03/2026"
+    },
+    {
+        "id": 111,
+        "title": "Cannot change password",
+        "description": "Password update form not submitting properly.",
+        "customer": "Rifat Karim",
+        "priority": "Medium Priority",
+        "status": "Open",
+        "createdAt": "01/03/2026"
+    },
+    {
+        "id": 112,
+        "title": "Coupon code expired unexpectedly",
+        "description": "Valid coupon showing expired message.",
+        "customer": "Sharmin Akter",
+        "priority": "Low Priority",
+        "status": "Open",
+        "createdAt": "24/02/2026"
+    },
+    {
+        "id": 113,
+        "title": "Product image not displaying",
+        "description": "Images are broken on product details page.",
+        "customer": "Hasibul Islam",
+        "priority": "Medium Priority",
+        "status": "In-Progress",
+        "createdAt": "23/02/2026"
+    },
+    {
+        "id": 114,
+        "title": "Multiple charges for single order",
+        "description": "Customer charged twice for the same order.",
+        "customer": "Lamia Rahman",
+        "priority": "High Priority",
+        "status": "Open",
+        "createdAt": "03/03/2026"
+    },
+    {
+        "id": 115,
+        "title": "Search feature not working",
+        "description": "Search results not showing relevant products.",
+        "customer": "Sabbir Ahmed",
+        "priority": "Medium Priority",
+        "status": "Open",
+        "createdAt": "02/03/2026"
+    }
+]
