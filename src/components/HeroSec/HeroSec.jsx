@@ -1,13 +1,23 @@
+import vector1 from "../../assets/vector1.png";
+
 const HeroSec = () => {
     return (
-        <div className="p-4 min-h-70 flex flex-col md:flex-row justify-center items-center gap-8">
-            <div className="progress-card bg-red-500 w-full md:w-1/2 h-45 rounded-xl bg-linear-to-r from-purple-600 via-purple-500 to-purple-400 flex flex-col justify-center items-center text-2xl font-bold">
-                <h2>In-Progress</h2>
-                <p className="text-4xl">0</p>
+        <div className="p-4 min-h-70 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
+            <div className=" progress-card bg-linear-to-r from-purple-600 via-purple-500 to-purple-400 w-full md:w-1/2 h-45 rounded-xl flex items-center justify-between">
+                <img className="h-full object-contain" src={vector1} alt="vector image" />
+                <div className="flex flex-col justify-center items-center font-bold">
+                    <h2>In-Progress</h2>
+                    <p className="text-4xl">0</p>
+                </div>
+                <img className="h-full object-contain -scale-x-100" src={vector1} alt="vector image" />
             </div>
-            <div className="resolved-card bg-green-400 w-full md:w-1/2 h-45 rounded-xl bg-linear-to-r from-green-400 via-green-500 to-green-600 flex flex-col justify-center items-center text-2xl font-bold">
-                <h2>Resolved</h2>
-                <p className="text-4xl">0</p>
+            <div className="progress-card bg-linear-to-r from-green-600 via-green-500 to-green-400 w-full md:w-1/2 h-45 rounded-xl flex items-center justify-between">
+                <img className="h-full object-contain" src={vector1} alt="vector image" />
+                <div className="flex flex-col justify-center items-center font-bold">
+                    <h2>Resolved</h2>
+                    <p className="text-4xl">0</p>
+                </div>
+                <img className="h-full object-contain -scale-x-100" src={vector1} alt="vector image" />
             </div>
         </div>
     );
