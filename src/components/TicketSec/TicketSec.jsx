@@ -1,7 +1,7 @@
 import { use } from 'react';
 import EachTicket from '../EachTicket/EachTicket';
 import EachProgressTask from '../EachProgressTask/EachProgressTask';
-const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask }) => {
+const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask, handleCompleteTask, prevCompletedTask }) => {
 
     const tickets = use(csProblemsPromise);
     return (
@@ -27,6 +27,7 @@ const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask }) => {
                                 progressTask.map(eachProgressTask => <EachProgressTask
                                     key={eachProgressTask.id}
                                     eachProgressTask={eachProgressTask}
+                                    handleCompleteTask={handleCompleteTask}
                                 ></EachProgressTask>)
                         }
                     </div>
