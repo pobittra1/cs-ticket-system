@@ -1,6 +1,7 @@
 import { use } from 'react';
 import EachTicket from '../EachTicket/EachTicket';
 import EachProgressTask from '../EachProgressTask/EachProgressTask';
+import EachPrevCompletedTask from '../EachPrevCompletedTask/EachPrevCompletedTask';
 const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask, handleCompleteTask, prevCompletedTask }) => {
 
     const tickets = use(csProblemsPromise);
@@ -35,9 +36,25 @@ const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask, handleCo
                 <div className="resolved-task-container mt-8">
                     <h2 className="sub-title">Resolved Task</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-0">
-                        <div className="mt-4 bg-[#001931] rounded-sm capitalize">
-                            <h3 className="p-2">incorrect billing address</h3>
-                        </div>
+                        {
+                            prevCompletedTask.length === 0 ? (
+                                <p className="text-gray-600">No Resolved Task Yet</p>
+                            ) : (
+                                prevCompletedTask.map((eachPrevCompletedTasks, Index) =>
+                                    // inner array empty check
+                                    eachPrevCompletedTasks.length === 0 ? (
+                                        <p key={Index} className="text-gray-600">No Resolved Task Yet</p>
+                                    ) : (
+                                        eachPrevCompletedTasks.map(eachPrevCompletedTask => (
+                                            <EachPrevCompletedTask
+                                                key={eachPrevCompletedTask.id}
+                                                eachPrevCompletedTask={eachPrevCompletedTask}
+                                            ></EachPrevCompletedTask>
+                                        ))
+                                    )
+                                )
+                            )
+                        }
                     </div>
                 </div>
             </div>

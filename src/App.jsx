@@ -14,6 +14,16 @@ function App() {
   const [prevCompletedTask, setCompleteTask] = useState([]);
 
   const handleEachTicket = (ticket) => {
+    //validate ticket-- if already added ticket in progress, we can't add again
+    const isExitsAlready = progressTask.find(eachProgressTask => eachProgressTask.id === ticket.id);
+    if (isExitsAlready) {
+      toast.error("this task already have in progress", {
+        position: 'bottom-right',
+
+      });
+      return;
+    }
+
     const newProgressTask = [...progressTask, ticket];
     setProgressTask(newProgressTask);
     toast(`${ticket.title} - in progress`);
@@ -32,6 +42,7 @@ function App() {
 
 
   }
+
 
 
   return (
