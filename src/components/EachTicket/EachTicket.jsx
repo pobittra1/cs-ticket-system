@@ -10,7 +10,7 @@ const EachTicket = ({ ticket }) => {
                 <h3 className="text-base font-semibold text-gray-800">
                     {title}
                 </h3>
-                <p className="text-xs font-medium text-green-600 uppercase bg-green-100 px-2 py-0.5 rounded-full">
+                <p className={`shrink-0 text-xs font-medium  uppercase bg-green-100 px-2 py-0.5 rounded-full ${status == "Open" ? "text-green-600" : "text-yellow-600"}`}>
                     <FontAwesomeIcon icon={faCircle} /> {status}
                 </p>
             </div>
