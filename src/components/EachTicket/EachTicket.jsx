@@ -23,7 +23,15 @@ const EachTicket = ({ ticket }) => {
 
                 <div className="flex items-center gap-2">
                     <p className="id font-semibold text-sm">#{id}</p>
-                    <p className="priority text-red-600 font-medium text-xs">{priority}</p>
+                    <p
+                        className={`priority font-medium text-xs 
+                            ${priority === "High Priority" ? "text-red-600"
+                                : priority === "Medium Priority" ? "text-yellow-600"
+                                    : "text-green-600"
+                            }`}
+                    >
+                        {priority}
+                    </p>
                 </div>
 
                 <div className="flex items-center gap-2 text-right">
