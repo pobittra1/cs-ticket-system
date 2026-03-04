@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="web-container w-11/12 mx-auto bg-white">
+      <div className="web-container w-11/12 mx-auto">
         <Navbar></Navbar>
         <HeroSec></HeroSec>
         <TicketSec></TicketSec>
