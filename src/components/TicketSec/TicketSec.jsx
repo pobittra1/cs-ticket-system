@@ -101,7 +101,7 @@ const TicketSec = () => {
                             {/* Right info */}
                             <div className="flex items-center gap-2 text-right">
                                 <p className="name font-semibold text-sm">John Smith</p>
-                                <p className="date text-gray-500 text-xs">03-03-2026</p>
+                                <p className="date mt-1 text-gray-500 text-xs">03-03-2026</p>
                             </div>
 
                         </div>
