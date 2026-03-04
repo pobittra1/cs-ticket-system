@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle, faCalendar } from '@fortawesome/free-solid-svg-icons'
 const TicketSec = () => {
     return (
         <div className="w-full grid grid-cols-12 p-4 gap-4">
@@ -11,7 +13,7 @@ const TicketSec = () => {
                                 Login issue - Can't access account.
                             </h3>
                             <p className="text-xs font-medium text-green-600 uppercase bg-green-100 px-2 py-0.5 rounded-full">
-                                Open
+                                <FontAwesomeIcon icon={faCircle} /> Open
                             </p>
                         </div>
 
@@ -28,7 +30,7 @@ const TicketSec = () => {
 
                             <div className="flex items-center gap-2 text-right">
                                 <p className="name font-semibold text-sm">John Smith</p>
-                                <p className="date text-gray-500 text-xs">03-03-2026</p>
+                                <p className="date text-gray-500 text-xs"><FontAwesomeIcon icon={faCalendar} />03-03-2026</p>
                             </div>
                         </div>
                     </div>
