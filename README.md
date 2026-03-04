@@ -1,16 +1,20 @@
-# React + Vite
+#assignment QNA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is JSX, and why is it used?
+JSX is stands for javasciprt XML. it use to write code's of html, css, and js in one scope.
 
-Currently, two official plugins are available:
+## What is the difference between State and Props?
+boths are like variable. they can store data. but state can store data in a component. and it's manageable or change within this component. otherside, props store can data as component key. and it's pass the data parent to child component. props data just read only. can't change it.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What is the useState hook, and how does it work?
+it's a hook, can store initial value of varriable and callback function. using callback function we can do operation base on this state.
+```
+const [ticket, setTicket] = useState([]);
+```
+Here, ticket is like variable . and initial value is [] empty array. by using setTicket function we can add or remove ticket based on this state variable.
 
-## React Compiler
+## How can you share state between components in React?
+using lift state up system. first i need to decleare state in parent component. after this, we can pass the state as props value of child component. then we can access it from child component after desctructuring props of this state.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How is event handling done in React?
+event handling in react, it's similar like html but need to use camelCase name. and the function will be instead of string. example- onClick=(function name as string). onClick is like camel Case.
