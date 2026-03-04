@@ -24,7 +24,7 @@ function App() {
       <div>
         <div className="web-container w-11/12 mx-auto">
           <Navbar></Navbar>
-          <HeroSec></HeroSec>
+          <HeroSec progressTask={progressTask}></HeroSec>
           <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
             <TicketSec
               csProblemsPromise={csProblemsPromise}
