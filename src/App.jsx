@@ -10,10 +10,12 @@ function App() {
 
   return (
     <>
-      <div className="web-container w-11/12 mx-auto">
-        <Navbar></Navbar>
-        <HeroSec></HeroSec>
-        <TicketSec></TicketSec>
+      <div>
+        <div className="web-container w-11/12 mx-auto">
+          <Navbar></Navbar>
+          <HeroSec></HeroSec>
+          <TicketSec></TicketSec>
+        </div>
         <Footer></Footer>
       </div>
     </>

@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faFacebook, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons' // Gmail / Email
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-gray-300">
@@ -43,9 +46,31 @@ const Footer = () => {
                 <div>
                     <h3 className="text-lg font-semibold text-white mb-4">Social Links</h3>
                     <ul className="space-y-2 text-sm">
-                        <li className="hover:text-white cursor-pointer">@CSTicketSystem</li>
-                        <li className="hover:text-white cursor-pointer">@CSTSupport</li>
-                        <li className="hover:text-white cursor-pointer">support@cst.com</li>
+                        <li className="flex items-center gap-2 cursor-pointer">
+                            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-white">
+                                <FontAwesomeIcon icon={faXTwitter} className="text-xs text-black" />
+                            </div>
+                            @CS-TicketSystem
+                        </li>
+                        <li className="flex items-center gap-2 cursor-pointer">
+                            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-white">
+                                <FontAwesomeIcon icon={faLinkedin} className="text-xs text-black" />
+                            </div>
+                            @CS-TicketSystem
+                        </li>
+                        <li className="flex items-center gap-2 cursor-pointer">
+                            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-white">
+                                <FontAwesomeIcon icon={faFacebook} className="text-xs text-black" />
+                            </div>
+                            @CS-TicketSystem
+                        </li>
+                        <li className="flex items-center gap-2 cursor-pointer">
+                            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-white">
+                                <FontAwesomeIcon icon={faEnvelope} className="text-xs text-black" />
+                            </div>
+                            support@cst.com
+                        </li>
+
                     </ul>
                 </div>
 
