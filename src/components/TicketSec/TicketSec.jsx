@@ -1,6 +1,7 @@
 import { use } from 'react';
 import EachTicket from '../EachTicket/EachTicket';
-const TicketSec = ({ csProblemsPromise, handleEachTicket }) => {
+import EachProgressTask from '../EachProgressTask/EachProgressTask';
+const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask }) => {
 
     const tickets = use(csProblemsPromise);
     return (
@@ -21,10 +22,13 @@ const TicketSec = ({ csProblemsPromise, handleEachTicket }) => {
                 <div className="task-status-container">
                     <h2 className="sub-title">Task Status</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-2">
-                        <div className="task-status-card bg-white text-black p-3 rounded-lg shadow-lg">
-                            <h3 className="text-xl font-bold capitalize">payment failed - card Declined</h3>
-                            <button className="py-1.5 bg-[#02A53B] text-white font-semibold cursor-pointer w-full text-center mt-2">complete</button>
-                        </div>
+                        {
+                            progressTask.length === 0 ? <p className='text-gray-600'>Select a ticket to add to Task Status</p> :
+                                progressTask.map(eachProgressTask => <EachProgressTask
+                                    key={eachProgressTask.id}
+                                    eachProgressTask={eachProgressTask}
+                                ></EachProgressTask>)
+                        }
                     </div>
                 </div>
                 <div className="resolved-task-container mt-8">

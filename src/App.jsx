@@ -29,6 +29,7 @@ function App() {
             <TicketSec
               csProblemsPromise={csProblemsPromise}
               handleEachTicket={handleEachTicket}
+              progressTask={progressTask}
             ></TicketSec>
           </Suspense>
         </div>
