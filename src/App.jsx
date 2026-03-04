@@ -1,13 +1,23 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Footer from './components/Footer/Footer'
 import HeroSec from './components/HeroSec/HeroSec'
 import Navbar from './components/Navbar/Navbar'
 import TicketSec from './components/TicketSec/TicketSec'
+import { toast } from 'react-toastify'
 
 const csProblemsPromise = fetch("/cs-problems.json").then(res => res.json());
 function App() {
+
+  const [progressTask, setProgressTask] = useState([])
+
+  const handleEachTicket = (ticket) => {
+    const newProgressTask = [...progressTask, ticket];
+    setProgressTask(newProgressTask);
+    toast(`${ticket.title} - in progress`);
+  }
+
 
   return (
     <>
@@ -16,7 +26,10 @@ function App() {
           <Navbar></Navbar>
           <HeroSec></HeroSec>
           <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-            <TicketSec csProblemsPromise={csProblemsPromise}></TicketSec>
+            <TicketSec
+              csProblemsPromise={csProblemsPromise}
+              handleEachTicket={handleEachTicket}
+            ></TicketSec>
           </Suspense>
         </div>
         <Footer></Footer>

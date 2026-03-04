@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faCalendar } from '@fortawesome/free-solid-svg-icons'
-const EachTicket = ({ ticket }) => {
+const EachTicket = ({ ticket, handleEachTicket }) => {
     //destructure values from ticket
     const { id, title, description, customer, priority, status, createdAt } = ticket
     return (
-        <div className="ticket bg-white shadow-lg rounded-lg p-3 w-full max-w-sm mx-auto flex flex-col gap-3">
+        <div className="ticket bg-white shadow-lg rounded-lg p-3 w-full max-w-sm mx-auto flex flex-col gap-3 cursor-pointer" onClick={() => handleEachTicket(ticket)}>
 
             <div className="flex justify-between items-start">
                 <h3 className="text-base font-semibold text-gray-800">

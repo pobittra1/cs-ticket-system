@@ -1,16 +1,19 @@
 import { use } from 'react';
 import EachTicket from '../EachTicket/EachTicket';
-const TicketSec = ({ csProblemsPromise }) => {
+const TicketSec = ({ csProblemsPromise, handleEachTicket }) => {
 
     const tickets = use(csProblemsPromise);
-    console.log(tickets);
     return (
         <div className="w-full grid grid-cols-12 p-4 gap-4">
             <div className="left-ticket-container col-span-12 lg:col-span-8">
                 <h2 className="sub-title">Customer Tickets</h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                     {
-                        tickets.map(ticket => <EachTicket key={ticket.id} ticket={ticket}></EachTicket>)
+                        tickets.map(ticket => <EachTicket
+                            key={ticket.id}
+                            ticket={ticket}
+                            handleEachTicket={handleEachTicket}
+                        ></EachTicket>)
                     }
                 </div>
             </div>
