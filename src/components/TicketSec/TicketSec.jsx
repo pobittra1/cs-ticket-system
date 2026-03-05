@@ -2,9 +2,12 @@ import { use } from 'react';
 import EachTicket from '../EachTicket/EachTicket';
 import EachProgressTask from '../EachProgressTask/EachProgressTask';
 import EachPrevCompletedTask from '../EachPrevCompletedTask/EachPrevCompletedTask';
-const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask, handleCompleteTask, prevCompletedTask }) => {
+const TicketSec = ({ csProblemsPromise, handleEachTicket, progressTask, handleCompleteTask, prevCompletedTask, completedIds }) => {
 
-    const tickets = use(csProblemsPromise);
+    let tickets = use(csProblemsPromise);
+    //filter the each completedIds with tickets => ticket.id -----if not match store it into ticket. if match--remove it
+    tickets = tickets.filter(ticket => !completedIds.includes(ticket.id));
+
     return (
         <div className="w-full grid grid-cols-12 p-4 gap-4">
             <div className="left-ticket-container col-span-12 lg:col-span-8">

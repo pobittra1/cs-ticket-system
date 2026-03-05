@@ -12,7 +12,7 @@ function App() {
 
   const [progressTask, setProgressTask] = useState([])
   const [prevCompletedTask, setCompleteTask] = useState([]);
-
+  const [completedIds, setCompletedIds] = useState([]);
   const handleEachTicket = (ticket) => {
     //validate ticket-- if already added ticket in progress, we can't add again
     const isExitsAlready = progressTask.find(eachProgressTask => eachProgressTask.id === ticket.id);
@@ -40,9 +40,9 @@ function App() {
     const updatedProgressTaskAfterCompleted = progressTask.filter(eachProessTask => eachProessTask.id !== id);
     setProgressTask(updatedProgressTaskAfterCompleted);
 
-
+    //get the completed tickets ids and store in a array state
+    setCompletedIds(prev => [...prev, id]);
   }
-
 
 
   return (
@@ -61,6 +61,7 @@ function App() {
               progressTask={progressTask}
               handleCompleteTask={handleCompleteTask}
               prevCompletedTask={prevCompletedTask}
+              completedIds={completedIds}
             ></TicketSec>
           </Suspense>
         </div>
